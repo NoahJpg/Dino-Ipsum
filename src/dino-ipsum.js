@@ -6,6 +6,7 @@ export default class Dinos {
 
     request.addEventListener('loadend', function() {
       const response = JSON.parse(this.responseText);
+      console.log(response[0][0] + ' - response')
       if (this.status === 200) {
         resolve([response, word])
       } else {
